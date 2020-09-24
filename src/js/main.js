@@ -2,6 +2,8 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
+let server = require('./server'); // express server on localhost:4857
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -13,7 +15,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('www/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
